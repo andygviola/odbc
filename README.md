@@ -1,4 +1,4 @@
-This repository is a fork from alexbrainman\odbc, original creator.
+This repository is a fork from andygviola\odbc, original creator.
 
   "odbc driver written in go. Implements database driver interface as used by standard database/sql package. It calls into odbc dll on Windows, and uses cgo (unixODBC) everywhere else.
 
