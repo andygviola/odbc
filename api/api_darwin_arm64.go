@@ -1,28 +1,14 @@
-// Copyright 2012 The Go Authors. All rights reserved.
-// Use of this source code is governed by a BSD-style
-// license that can be found in the LICENSE file.
-
-//go:build linux && cgo
-// +build linux,cgo
+//go:build darwin && arm64 && cgo
+// +build darwin,arm64,cgo
 
 package api
 
-// #cgo darwin LDFLAGS: -L /usr/local/opt/unixodbc/lib -lodbc
-// #cgo darwin CFLAGS: -I /usr/local/opt/unixodbc/include
-// #cgo linux LDFLAGS: -lodbc
-// #cgo freebsd LDFLAGS: -L /usr/local/lib -lodbc
-// #cgo freebsd CFLAGS: -I/usr/local/include
-// #include <sql.h>
-// #include <sqlext.h>
-// #include <stdint.h>
 /*
-SQLRETURN sqlSetEnvUIntPtrAttr(SQLHENV environmentHandle, SQLINTEGER attribute, uintptr_t valuePtr, SQLINTEGER stringLength) {
-	return SQLSetEnvAttr(environmentHandle, attribute, (SQLPOINTER)valuePtr, stringLength);
-}
-
-SQLRETURN sqlSetConnectUIntPtrAttr(SQLHDBC connectionHandle, SQLINTEGER attribute, uintptr_t valuePtr, SQLINTEGER stringLength) {
-	return SQLSetConnectAttr(connectionHandle, attribute, (SQLPOINTER)valuePtr, stringLength);
-}
+#cgo darwin LDFLAGS: -L/opt/homebrew/opt/unixodbc/lib -lodbc
+#cgo darwin CFLAGS: -I/opt/homebrew/opt/unixodbc/include
+#include <sql.h>
+#include <sqlext.h>
+#include <stdint.h>
 */
 import "C"
 
