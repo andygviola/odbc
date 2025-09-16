@@ -1,3 +1,7 @@
-odbc driver written in go. Implements database driver interface as used by standard database/sql package. It calls into odbc dll on Windows, and uses cgo (unixODBC) everywhere else.
+This repository is a fork from alexbrainman\odbc, original creator.
 
-To get started using odbc, have a look at the [wiki](../../wiki) pages.
+  "odbc driver written in go. Implements database driver interface as used by standard database/sql package. It calls into odbc dll on Windows, and uses cgo (unixODBC) everywhere else.
+
+  To get started using odbc, have a look at the [wiki](../../wiki) pages."
+
+This fork is created to try to support ARM64 architecture also.
